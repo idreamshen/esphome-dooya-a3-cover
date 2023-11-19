@@ -1,1 +1,22 @@
 * Esphome Dooya A3 Component
+
+* Core Example
+#+begin_src yaml
+external_components:
+  - source:
+      type: git
+      url: https://github.com/idreamshen/esphome-dooya_a3
+      ref: v1.0.0
+
+uart:
+  - id: myuart1
+    tx_pin: 1
+    rx_pin: 3
+    baud_rate: 9600
+
+cover:
+  platform: dooya_a3_cover
+  name: Dooya Cover
+  id_low: 0x12
+  id_high: 0x34
+#+end_src
